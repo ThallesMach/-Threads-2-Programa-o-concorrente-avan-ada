@@ -16,6 +16,7 @@ public class ClienteTarefas {
 	
 //		OutputStream outpuStreamCliente = socket.getOutputStream();
 		
+		
 		Thread threadEnviaComando = new Thread(new Runnable() {
 
 			@Override
@@ -83,11 +84,11 @@ public class ClienteTarefas {
 
 		socket.close();
 
-
 		/*
 		join(); //sem nenhum param
 		join(millis); //recebendo milli segundos
 		join(millis, nano); //recebendo milli e nano segundos
+		_Atividade 4
 */
 	}
 
