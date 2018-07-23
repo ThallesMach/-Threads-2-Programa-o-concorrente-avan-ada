@@ -1,5 +1,6 @@
 package br.com.alura.cliente;
 
+
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.Socket;
@@ -7,13 +8,11 @@ import java.util.Scanner;
 
 public class ClienteTarefas {
 
-
 	public static void main(String[] args) throws Exception {
 
 		Socket socket = new Socket("localhost", 12345);
 
 		System.out.println("Conexão Estabelecida");
-
 	
 //		OutputStream outpuStreamCliente = socket.getOutputStream();
 		
@@ -83,7 +82,8 @@ public class ClienteTarefas {
 		System.out.println("Fechando o socket do cliente");
 
 		socket.close();
-		
+
+
 		/*
 		join(); //sem nenhum param
 		join(millis); //recebendo milli segundos
