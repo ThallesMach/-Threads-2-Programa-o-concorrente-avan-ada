@@ -2,27 +2,28 @@ package br.com.alura.servidor;
 
 import java.io.PrintStream;
 
-import javax.management.RuntimeErrorException;
-
 public class ComandoC2 implements Runnable {
 
-	private PrintStream saidaCliente;
+	private PrintStream saida;
 
-	public ComandoC2(PrintStream saidaCliente) {
-		this.saidaCliente = saidaCliente;
+	public ComandoC2(PrintStream saida) { 
+		this.saida = saida;
 	}
 
 	@Override
 	public void run() {
-		System.out.println("Exercutando comando c2");
+		// será impresso no console do servidor
+		System.out.println("Executando comando c2");
+
 		try {
-			Thread.sleep(20000);
+			Thread.sleep(5000); //simulando algo demorado
 		} catch (InterruptedException e) {
 			throw new RuntimeException(e);
 		}
-		saidaCliente.println("Comando c2 exercutado com Sucesso!");
-		
 
+		// essa mensagem será enviada para o cliente
+		this.saida.println("Comando c2 executado com sucesso!");
+	
+//		throw new RuntimeException("problema no comando c1");
 	}
-
 }
